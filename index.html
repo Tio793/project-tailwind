@@ -17,14 +17,19 @@
     <title>Belajar tailwindcss</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
+      @custom-variant dark (&:where([class=dark], [class=dark] *));
       @theme {
         --color-clifford: #da373d;
         --font-test: "Winky Sans", cursive;
         --color-ape: #4c3773;
       }
+
+      #toggle:checked ~ label div.toggle-sircle{
+        @apply translate-x-3
+      }
     </style>
   </head>
-  <body class="h-400">
+  <body class="h-400 dark:bg-slate-800 dark:text-white">
     <h1 class="text-6xl font-extrabold text-center my-8">
       belajar
       <span
@@ -45,7 +50,9 @@
       <div class="w-1/2 m-auto h-32 bg-ape">Kotak 1</div>
     </section>
 
-    <section class="border-11 bg-clip-border mb-10 font-test max-w-2xl mx-auto bg-zinc-400 p-7">
+    <section
+      class="border-11 bg-clip-border mb-10 font-test max-w-2xl mx-auto bg-zinc-400 p-7"
+    >
       <h2
         class="mb-2 text-4xl bg-gradient-to-tl from-purple-900 to-blue-800 bg-clip-text text-transparent"
       >
@@ -119,10 +126,144 @@
       </p>
     </div>
 
-    <div class="flex shadow-xl shadow-slate-500 border-8 overflow-hidden  rounded-2xl  mt-30 max-w-xl h-96 bg-slate-500 mx-auto bg-contain bg-no-repeat bg-center" style="background-image: url(img/laptop.jpg);">
-      <div class="backdrop-blur-md w-[200px] h-[200px] bg-white/10 m-auto rounded-full"></div>
+    <div
+      class="flex shadow-xl shadow-slate-500 border-8 overflow-hidden rounded-2xl mt-30 max-w-xl h-96 bg-slate-500 mx-auto bg-contain bg-no-repeat bg-center"
+      style="background-image: url(img/laptop.jpg)"
+    >
+      <div
+        class="backdrop-sepia-50 bg-white/30 drop-shadow-2xl w-[200px] h-[200px] m-auto rounded-full"
+      ></div>
     </div>
-    <a href="#" class="transition p-4 bg-white shadow-md shadow-red-500/50 hover:shadow-lg shadow-red-500">Test</a>
+    <a
+      href="#"
+      class="transition p-4 bg-white shadow-md shadow-red-500/50 hover:shadow-lg shadow-red-500"
+      >Test</a
+    >
+    <table
+      class="w-1/2 mt-20 mx-auto border-separate border-spacing-3 border text-slate-200 bg-slate-700 font-test"
+    >
+      <thead>
+        <tr>
+          <th class="p-2 border bg-slate-400">Menu Buka</th>
+          <th class="p-2 border bg-slate-400">Menu Sahur</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="p-2 border bg-slate-600">Nasi Kebuli</td>
+          <td class="p-2 border bg-slate-600">Telor</td>
+        </tr>
+        <tr>
+          <td class="p-2 border bg-slate-600">Ayam Geprek</td>
+          <td class="p-2 border bg-slate-600">Telor</td>
+        </tr>
+        <tr>
+          <td class="p-2 border bg-slate-600">Mie Ayam</td>
+          <td class="p-2 border bg-slate-600">Telor</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table
+      class="table-auto border border-collapse border-spacing-3 mx-auto mt-10 border-gray-400 bg-slate-900 text-white font-bold"
+    >
+      <thead>
+        <tr>
+          <th class="border-b-1">Song</th>
+          <th class="border-b-1">Artist</th>
+          <th class="border-b-1">Year</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="p-5 border-b-1 border-slate-300">
+            The Sliding Mr. Bones (Next Stop, Pottersville)
+          </td>
+          <td class="p-5 border-b-1 border-slate-300">Malcolm Lockyer</td>
+          <td class="p-5 border-b-1 border-slate-300">1961</td>
+        </tr>
+        <tr>
+          <td class="p-5 border-b-1 border-slate-500">Witchy Woman</td>
+          <td class="p-5 border-b-1 border-slate-500">The Eagles</td>
+          <td class="p-5 border-b-1 border-slate-500">1972</td>
+        </tr>
+        <tr>
+          <td class="p-5 border-b-1 border-slate-700">Shining Star</td>
+          <td class="p-5 border-b-1 border-slate-700">Earth, Wind, and Fire</td>
+          <td class="p-5 border-b-1 border-slate-700">1975</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr class="my-20" />
+
+    <div class="flex justify-center">
+      <span class="text-sm text-slate-500 mr-2">Light</span>
+      <input type="checkbox" id="toggle" class="hidden">
+      <label for="toggle">
+        <div class="w-9 h-5 bg-slate-500 dark:bg-slate-200 rounded-full cursor-pointer flex items-center p-1">
+          <div class="w-4 h-4 bg-white dark:bg-slate-600 rounded-full toggle-sircle"></div>
+        </div>
+      </label>
+      <span class="text-sm text-slate-500 ml-2">Dark</span>
+    </div>
+
+    <button
+      class="my-10 bg-sky-500 px-5 py-2 rounded-full text-white font-semibold block font-test mx-auto hover:bg-blue-600 active:bg-blue-900 focus:ring focus:ring-sky-400 dark:bg-slate-600 dark:hover:bg-slate-500 dark:focus:ring-sky-900 dark:active:bg-slate-800 cursor-pointer"
+    >
+      Simpan
+    </button>
+
+    <div
+      class="max-w-lg my-10 border border-slate-200 rounded-xl mx-auto p-5 shadow-md hover:bg-blue-300 dark:hover:bg-slate-200 group font-serif"
+    >
+      <h5
+        class="font-bold text-slate-700 text-lg group-hover:text-white dark:group-hover:text-slate-800"
+      >
+        My Card
+      </h5>
+      <p
+        class="text-slate-600 group-hover:text-white selection:bg-lime-300 selection:text-black first-line:tracking-widest first-letter:text-7xl first-letter:float-left first-letter:mr-3 dark:group-hover:text-slate-800"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam nulla,
+        placeat aut maiores sit, dolores cupiditate consequuntur illum nostrum
+        ratione quos ea quae, consectetur aliquam nihil. Ducimus harum assumenda
+        numquam porro possimus recusandae perferendis fugiat ex voluptatum
+        corrupti quibusdam molestiae ipsam iure officiis, eaque dolorem, atque
+        sunt! Eum, obcaecati eveniet.
+      </p>
+    </div>
+
+    <div
+      class="max-w-lg border border-slate-200 rounded-xl mx-auto p-5 shadow-md"
+    >
+      <form action="">
+        <label for="email">
+          <span
+            class="block font-semibold mb-1 text-slate-700  dark:text-slate-200 after:content-['*'] after:text-pink-600 after:ml-0.5"
+            >Email</span
+          >
+          <input
+            type="email"
+            id="email"
+            placeholder="Email"
+            class="px-3 py-2 border rounded shadow w-full text-sm placeholder:text-slate-400 focus:outline-none focus:ring focus:ring-green-600 focus:border-green-600 invalid:text-pink-700 invalid:focus:ring-red-500 invalid:focus:border-red-500 peer"
+          />
+          <p class="mt-1 text-pink-700 invisible peer-invalid:visible">
+            Email tidak valid!
+          </p>
+        </label>
+      </form>
+    </div>
+
     <div class="h-100"></div>
+    <script>
+      document.getElementById("toggle").addEventListener("click", function () {
+        if (this.checked) {
+          document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+        }
+      })
+    </script>
   </body>
 </html>
