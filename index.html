@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Winky+Sans:wght@800&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Belajar tailwindcss</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-clifford: #da373d;
+        --font-test: "Winky Sans", cursive;
+        --color-ape: #4c3773;
+      }
+    </style>
+  </head>
+  <body class="h-400">
+    <h1 class="text-6xl font-extrabold text-center my-8">
+      belajar
+      <span
+        class="bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent"
+        >tailwindcss</span
+      >
+    </h1>
+
+    <section class="mb-10 bg-slate-400">
+      <h2 class="p-2 pl-50 bg-red-950 text-orange-50">Spacing</h2>
+      <div class="p-30 bg-zinc-400">
+        <div class="m-5 bg-slate-800 text-lime-400"><p>kotak</p></div>
+      </div>
+    </section>
+
+    <section class="mb-10 bg-slate-300">
+      <h2 class="bg-emerald-500 text-lime-950 font-bold">Sizing</h2>
+      <div class="w-1/2 m-auto h-32 bg-ape">Kotak 1</div>
+    </section>
+
+    <section class="border-11 bg-clip-border mb-10 font-test max-w-2xl mx-auto bg-zinc-400 p-7">
+      <h2
+        class="mb-2 text-4xl bg-gradient-to-tl from-purple-900 to-blue-800 bg-clip-text text-transparent"
+      >
+        Belajar Mengenai Typography pada
+        <span
+          class="bg-gradient-to-r from-cyan-300 to-violet-800 bg-clip-text text-transparent"
+          >TailwindCSS</span
+        >
+      </h2>
+      <div class="mb-4 text-teal-300">
+        By <a href="#" class="text-teal-800 uppercase">Thio</a> , 21 Maret 2025
+      </div>
+      <p class="mb-4">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut aut commodi
+        molestiae nemo.
+        <a href="#" class="underline font-semibold text-indigo-500"
+          >Doloribus doloremque</a
+        >
+        voluptate sunt fugiat debitis incidunt, repellat vitae ab ea nobis
+        aspernatur odit molestiae reprehenderit cum earum maiores. Nemo tempora
+        aliquid mollitia corporis commodi harum totam omnis voluptatibus eveniet
+        fugiat, repudiandae maiores ipsum quaerat rerum culpa!
+      </p>
+      <blockquote class="mb-4 italic font-thin text-orange-300 line-clamp-6">
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus,
+        consectetur nesciunt placeat provident esse ea excepturi. Blanditiis
+        expedita odio saepe?"
+      </blockquote>
+      <p
+        class="mb-4 bg-gradient-to-br from-red-900 to-orange-600 bg-clip-text text-transparent tracking-widest"
+      >
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora
+        facilis, asperiores quam dignissimos quod nulla, nemo dolore expedita
+        cumque hic modi obcaecati eius voluptatibus consectetur magnam earum
+        corporis, assumenda nesciunt.
+      </p>
+    </section>
+
+    <div
+      class="w-1/2 m-auto h-14 rounded bg-linear-to-br from-slate-800 via-red-700 to-amber-100"
+    ></div>
+
+    <div
+      class="overflow-y-scroll bg-fixed max-w-xl h-96 bg-[#5c418e] mx-auto mt-[100px]"
+      style="background-image: url(img/hutan.jpg)"
+    >
+      <p class="p-5 text-2xl">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt eos ab
+        corporis minima laborum dolor voluptas natus, ipsum dolorem quia nihil
+        quos aliquam, minus nostrum delectus, sit beatae tempore temporibus
+        quibusdam earum consectetur ad soluta iure? Porro distinctio recusandae
+        quae voluptate consequatur voluptatibus deserunt temporibus dolorum illo
+        minima perferendis praesentium eos, possimus, odit consequuntur eum
+        aliquam illum repellat commodi officia minus dolores? Harum, quia.
+        Consectetur, aliquam facere unde nisi sit natus consequuntur adipisci
+        reiciendis aliquid! Nemo, facilis exercitationem! Doloribus rem quo
+        recusandae quos inventore nesciunt ipsam. Tempora perspiciatis
+        praesentium pariatur consequatur a tenetur accusamus odit. Obcaecati,
+        consequatur fugiat similique beatae est, error debitis repudiandae hic
+        at sequi, rem inventore voluptate minima maxime voluptas ab eius amet
+        enim! Neque excepturi nostrum dolorem laboriosam tenetur libero quidem!
+        Quod quis aperiam non sed harum id asperiores ex reiciendis voluptatem
+        nostrum, veritatis, necessitatibus ratione animi neque facere repellat
+        amet labore corporis esse expedita dolore. Provident dicta consequuntur
+        cum odit illum ex ea culpa, delectus repellendus. Veritatis eaque
+        placeat velit laudantium doloremque vitae impedit dolore quibusdam
+        repellat. Atque sequi dolorum, labore obcaecati corporis ab optio
+        maiores. Ratione ullam quasi labore! Nobis nesciunt, pariatur animi ab
+        autem incidunt amet libero, expedita accusamus similique labore sint
+        aperiam.
+      </p>
+    </div>
+
+    <div class="flex shadow-xl shadow-slate-500 border-8 overflow-hidden  rounded-2xl  mt-30 max-w-xl h-96 bg-slate-500 mx-auto bg-contain bg-no-repeat bg-center" style="background-image: url(img/laptop.jpg);">
+      <div class="backdrop-blur-md w-[200px] h-[200px] bg-white/10 m-auto rounded-full"></div>
+    </div>
+    <a href="#" class="transition p-4 bg-white shadow-md shadow-red-500/50 hover:shadow-lg shadow-red-500">Test</a>
+    <div class="h-100"></div>
+  </body>
+</html>
