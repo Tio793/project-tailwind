@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -335,7 +335,7 @@
     ></div>
 
     <div
-      class="mx-auto shadow-lg w-100 h-50 border rounded-sm border-slate-200 mt-30"
+      class="container mx-auto shadow-lg w-100 h-50 border rounded-sm border-slate-200 mt-30"
     >
       <div
         class="w-20 h-20 bg-slate-200 rounded-full mx-auto mt-3 animate-pulse"
@@ -357,6 +357,44 @@
       </div>
     </div>
 
+    <hr class="my-20 border-t-8" />
+
+    <div class="container mx-auto">
+      <div class="border rounded-lg shadow-lg p-10 relative">
+        <div
+          class="w-10 h-10 bg-slate-300 rounded-full flex fixed bottom-0 right-0 -translate-x-1/2 mb-5"
+        >
+          <a href="#bottom" class="text-2xl m-auto cursor-pointer">🔝</a>
+        </div>
+        <img
+          src="img/laptop.jpg"
+          alt="laptop"
+          width="150"
+          class="float-start mr-3"
+        />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque,
+          veniam reiciendis at sequi optio perspiciatis saepe est expedita ipsa
+          rem necessitatibus dolorum autem ipsam libero! Error maiores
+          cupiditate consectetur sit omnis. Impedit excepturi nihil maiores
+          quam? Reiciendis delectus aliquam numquam ea odio similique dolor ex
+          animi porro ratione. Debitis, magnam.
+        </p>
+      </div>
+    </div>
+
+    <div class="container px-8 mx-auto">
+      
+      <div class="border rounded-lg shadow-lg p-10 mt-20 columns-3" id="bottom">
+        <img src="img/binar.jpg" alt="image" class="mb-8">
+        <img src="img/binar.jpg" alt="image" class="mb-8">
+        <img src="img/binar.jpg" alt="image" class="mb-8">
+        <img src="img/binar.jpg" alt="image" class="mb-8">
+        <img src="img/binar.jpg" alt="image" class="mb-8">
+        <img src="img/binar.jpg" alt="image" class="mb-8">
+      </div>
+    </div>
+
     <div class="h-100"></div>
     <script>
       document.getElementById("toggle").addEventListener("click", function () {
@@ -368,4 +406,4 @@
       });
     </script>
   </body>
-</html>
+</html id="bottom">
