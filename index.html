@@ -22,10 +22,59 @@
         --color-clifford: #da373d;
         --font-test: "Winky Sans", cursive;
         --color-ape: #4c3773;
+        --animate-spinslow: spin 3s linear infinite;
+        --animate-wiggle: wiggle 1s ease-in-out infinite;
+        --animate-slideRight: slideRight 3s ease-in-out infinite;
+        --animate-scaleUpDown: scaleUpDown 2s ease-in-out infinite;
+        --animate-changeColor: changeColor 2s linear infinite;
+
+        @keyframes changeColor {
+          0% {
+            background-color: red;
+          }
+          50% {
+            background-color: blue;
+          }
+          100% {
+            background-color: red;
+          }
+        }
+
+        @keyframes wiggle {
+          0%,
+          100% {
+            transform: rotate(-3deg);
+          }
+          50% {
+            transform: rotate(3deg);
+          }
+        }
+
+        @keyframes slideRight {
+          0% {
+            transform: translateX(0);
+          }
+          50% {
+            transform: translateX(100px);
+          }
+          100% {
+            transform: translateX(0);
+          }
+        }
+
+        @keyframes scaleUpDown {
+          0%,
+          100% {
+            transform: scale(1);
+          }
+          50% {
+            transform: scale(1.5);
+          }
+        }
       }
 
-      #toggle:checked ~ label div.toggle-sircle{
-        @apply translate-x-3
+      #toggle:checked ~ label div.toggle-sircle {
+        @apply translate-x-3;
       }
     </style>
   </head>
@@ -198,10 +247,14 @@
 
     <div class="flex justify-center">
       <span class="text-sm text-slate-500 mr-2">Light</span>
-      <input type="checkbox" id="toggle" class="hidden">
+      <input type="checkbox" id="toggle" class="hidden" />
       <label for="toggle">
-        <div class="w-9 h-5 bg-slate-500 dark:bg-slate-200 rounded-full cursor-pointer flex items-center p-1">
-          <div class="w-4 h-4 bg-white dark:bg-slate-600 rounded-full toggle-sircle"></div>
+        <div
+          class="w-9 h-5 bg-slate-500 dark:bg-slate-200 rounded-full cursor-pointer flex items-center p-1"
+        >
+          <div
+            class="w-4 h-4 bg-white dark:bg-slate-600 rounded-full toggle-sircle"
+          ></div>
         </div>
       </label>
       <span class="text-sm text-slate-500 ml-2">Dark</span>
@@ -239,7 +292,7 @@
       <form action="">
         <label for="email">
           <span
-            class="block font-semibold mb-1 text-slate-700  dark:text-slate-200 after:content-['*'] after:text-pink-600 after:ml-0.5"
+            class="block font-semibold mb-1 text-slate-700 dark:text-slate-200 after:content-['*'] after:text-pink-600 after:ml-0.5"
             >Email</span
           >
           <input
@@ -254,6 +307,55 @@
         </label>
       </form>
     </div>
+    <hr class="my-20" />
+
+    <div
+      class="w-40 h-40 bg-sky-500 mx-auto rounded-lg shadow-lg hover:scale-150 hover:rotate-180 transition hover:bg-orange-500 origin-top-left"
+    ></div>
+
+    <div class="w-40 h-40 mx-auto my-20 group">
+      <div
+        class="w-full h-full bg-sky-500 rounded-lg shadow-lg group-hover:rotate-180 origin-top-left transition duration-1000 delay-1000"
+      ></div>
+    </div>
+    <div
+      class="w-40 h-40 bg-orange-500 mx-auto rounded-lg shadow-lg animate-spinslow mb-20"
+    ></div>
+    <div
+      class="w-40 h-40 bg-orange-500 mx-auto rounded-lg shadow-lg animate-wiggle mb-20"
+    ></div>
+    <div
+      class="w-40 h-40 bg-orange-500 mx-auto rounded-lg shadow-lg animate-slideRight mb-20"
+    ></div>
+    <div
+      class="w-40 h-40 bg-orange-500 mx-auto rounded-lg shadow-lg animate-scaleUpDown mb-20"
+    ></div>
+    <div
+      class="w-40 h-40 bg-orange-500 mx-auto rounded-lg shadow-lg animate-changeColor mb-20"
+    ></div>
+
+    <div
+      class="mx-auto shadow-lg w-100 h-50 border rounded-sm border-slate-200 mt-30"
+    >
+      <div
+        class="w-20 h-20 bg-slate-200 rounded-full mx-auto mt-3 animate-pulse"
+      ></div>
+      <div class="mt-5">
+        <hr
+          class="w-60 border-none h-2 bg-slate-200 mx-auto rounded-md animate-pulse"
+        />
+      </div>
+      <div class="mt-5">
+        <hr
+          class="w-40 border-none h-2 bg-slate-200 mx-auto rounded-md animate-pulse"
+        />
+      </div>
+      <div class="mt-5">
+        <hr
+          class="w-50 border-none h-2 bg-slate-200 mx-auto rounded-md animate-pulse"
+        />
+      </div>
+    </div>
 
     <div class="h-100"></div>
     <script>
@@ -263,7 +365,7 @@
         } else {
           document.documentElement.classList.remove("dark");
         }
-      })
+      });
     </script>
   </body>
 </html>
