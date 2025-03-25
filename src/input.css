@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme {
+  --color-clifford: #da373d;
+  --font-test: "Winky Sans", cursive;
+  --color-ape: #4c3773;
+  --animate-spinslow: spin 3s linear infinite;
+  --animate-wiggle: wiggle 1s ease-in-out infinite;
+  --animate-slideRight: slideRight 3s ease-in-out infinite;
+  --animate-scaleUpDown: scaleUpDown 2s ease-in-out infinite;
+  --animate-changeColor: changeColor 2s linear infinite;
+
+  @keyframes changeColor {
+    0% {
+      background-color: red;
+    }
+    50% {
+      background-color: blue;
+    }
+    100% {
+      background-color: red;
+    }
+  }
+
+  @keyframes wiggle {
+    0%,
+    100% {
+      transform: rotate(-3deg);
+    }
+    50% {
+      transform: rotate(3deg);
+    }
+  }
+
+  @keyframes slideRight {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(100px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes scaleUpDown {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+  }
+}
+
+@layer base {
+  h1 {
+    font-size: 10rem;
+    color: theme(colors.ape);
+  }
+}
+
+@layer components {
+  .grid-card {
+    @apply bg-blue-500 aspect-4/3 md:aspect-3/4 xl:aspect-4/3 rounded-lg overflow-hidden relative hover:scale-95 transition-all duration-500 active:scale-102;
+  }
+
+  .grid-item {
+    @apply w-full h-full bg-cover bg-center  transition-all duration-500 absolute
+  }
+}
